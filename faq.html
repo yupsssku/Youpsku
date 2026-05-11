@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive, nosnippet, noimageindex">
+<title>FAQ — Pertanyaan Umum | RuangOTP</title>
+<meta name="description" content="Temukan jawaban atas pertanyaan umum tentang layanan nomor virtual gratis RuangOTP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#080b12;--bg2:#0e1320;--bg3:#141926;--bg4:#1a2133;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.11);--text:#dde3f0;--text2:#7a869e;--text3:#4a5568;--accent:#5b7fff;--accent2:#3d5edb;--accent3:rgba(91,127,255,0.12);--green:#2dd4a0;--green2:rgba(45,212,160,0.12);--red:#f56565;--font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--r:16px;--r-sm:10px;--r-xs:6px;--nav-h:60px}
+[data-theme="light"]{--bg:#f2f4fa;--bg2:#ffffff;--bg3:#eaecf5;--bg4:#e0e4f0;--border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.13);--text:#111827;--text2:#6b7280;--text3:#9ca3af}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+::selection{background:rgba(91,127,255,0.3);color:var(--text)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:99px}
+header{position:sticky;top:0;z-index:300;background:rgba(8,11,18,0.85);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+[data-theme="light"] header{background:rgba(242,244,250,0.85)}
+nav{max-width:1320px;margin:0 auto;padding:0 16px;height:var(--nav-h);display:flex;align-items:center;gap:10px}
+.logo{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;display:flex;align-items:center;gap:6px;text-decoration:none}
+.logo-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-link{padding:7px 12px;border-radius:var(--r-sm);font-size:12px;font-weight:600;color:var(--text2);text-decoration:none;transition:all .2s}
+.nav-link:hover,.nav-link.active{background:var(--accent3);color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:6px;margin-left:8px}
+.nav-btn{display:flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:pointer;font-size:13px;background:transparent;color:var(--text2);transition:all .2s;height:34px;min-width:34px}
+.nav-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.page-hero{background:linear-gradient(135deg,rgba(91,127,255,0.07),rgba(45,212,160,0.03));border-bottom:1px solid var(--border);padding:48px 20px 40px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(91,127,255,0.07),transparent 70%);pointer-events:none}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent3);border:1px solid rgba(91,127,255,0.2);padding:5px 12px;border-radius:99px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.5px;margin-bottom:14px;text-transform:uppercase}
+.page-hero h1{font-size:clamp(22px,4vw,38px);font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;background:linear-gradient(135deg,var(--text) 50%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{font-size:14px;color:var(--text2);max-width:500px;margin:0 auto}
+.container{max-width:860px;margin:0 auto;padding:40px 16px 80px}
+.search-wrap{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r);padding:20px;margin-bottom:32px;text-align:center}
+.search-inner{position:relative;max-width:520px;margin:0 auto}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--text2);fill:none;stroke-width:2;pointer-events:none}
+.search-input{width:100%;padding:11px 13px 11px 38px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);color:var(--text);font-family:var(--font);font-size:13px;transition:all .2s;outline:none}
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,127,255,0.1)}
+.search-input::placeholder{color:var(--text3)}
+.filter-tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.filter-btn{padding:8px 16px;background:var(--bg2);border:1px solid var(--border2);border-radius:99px;cursor:pointer;font-family:var(--font);font-size:12px;font-weight:600;color:var(--text2);transition:all .2s}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn:hover:not(.active){border-color:rgba(91,127,255,0.4);color:var(--accent)}
+.faq-group{margin-bottom:40px}
+.faq-group-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.faq-group-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;overflow:hidden;transition:border-color .2s}
+.faq-item:hover{border-color:rgba(91,127,255,0.3)}
+.faq-q{padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq-q-text{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:10px}
+.faq-q-icon{font-size:18px;flex-shrink:0}
+.faq-toggle{color:var(--text3);font-size:18px;transition:transform .25s;flex-shrink:0;font-weight:300}
+.faq-item.open .faq-toggle{transform:rotate(45deg);color:var(--accent)}
+.faq-item.open{border-color:rgba(91,127,255,0.3)}
+.faq-a{display:none;padding:0 20px 18px;font-size:13px;color:var(--text2);line-height:1.75}
+.faq-a a{color:var(--accent);text-decoration:none}
+.faq-a a:hover{text-decoration:underline}
+.faq-item.open .faq-a{display:block}
+.cta-box{background:linear-gradient(135deg,rgba(91,127,255,0.1),rgba(45,212,160,0.05));border:1px solid rgba(91,127,255,0.2);border-radius:var(--r);padding:32px;text-align:center;margin-top:40px}
+.cta-box h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.cta-box p{font-size:13px;color:var(--text2);margin-bottom:20px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;background:var(--accent);color:#fff;text-decoration:none;border-radius:var(--r-sm);font-size:13px;font-weight:600;transition:all .2s}
+.cta-btn:hover{background:var(--accent2);transform:translateY(-1px)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 16px 20px}
+.footer-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px 16px;margin-bottom:20px}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.footer-col p,.footer-col a{font-size:12px;color:var(--text2);text-decoration:none;display:block;margin-bottom:6px;transition:color .2s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{max-width:1320px;margin:0 auto;padding-top:16px;border-top:1px solid var(--border);text-align:center;font-size:10px;color:var(--text3)}
+.footer-credit{color:var(--accent);font-weight:600}
+@media(min-width:768px){.footer-inner{grid-template-columns:repeat(4,1fr)}}
+.hidden{display:none!important}
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+<nav>
+<a href="index.html" class="logo"><span class="logo-dot"></span>Ruang<span>OTP</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-link">Beranda</a>
+<a href="faq.html" class="nav-link active">FAQ</a>
+<a href="contact.html" class="nav-link">Kontak</a>
+</div>
+<div class="nav-right">
+<button class="nav-btn" onclick="toggleTheme()" title="Ganti Tema"><span id="themeIcon">☀️</span></button>
+</div>
+</nav>
+</header>
+
+<div class="page-hero">
+<div class="page-hero-badge">❓ Pusat Bantuan</div>
+<h1>Pertanyaan yang Sering Diajukan</h1>
+<p>Semua yang perlu kamu ketahui tentang layanan RuangOTP</p>
+</div>
+
+<div class="container">
+<div class="search-wrap">
+<div class="search-inner">
+<svg class="search-icon" viewBox="0 0 24 24" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input class="search-input" type="text" id="searchFaq" placeholder="Cari pertanyaan..." oninput="cariFaq()" autocomplete="off">
+</div>
+</div>
+
+<div class="filter-tabs">
+<button class="filter-btn active" onclick="filterKategori('all',this)">Semua</button>
+<button class="filter-btn" onclick="filterKategori('mulai',this)">Mulai</button>
+<button class="filter-btn" onclick="filterKategori('penggunaan',this)">Penggunaan</button>
+<button class="filter-btn" onclick="filterKategori('teknis',this)">Teknis</button>
+<button class="filter-btn" onclick="filterKategori('privasi',this)">Privasi</button>
+</div>
+
+<div class="faq-group" data-cat="mulai">
+<div class="faq-group-title">🚀 Mulai Menggunakan</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">❓</span>Bagaimana cara menggunakan RuangOTP?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Sangat mudah! Kunjungi halaman utama, telusuri nomor yang tersedia dari berbagai negara, salin nomor yang diinginkan, lalu gunakan untuk verifikasi di platform manapun. Pesan SMS akan muncul otomatis secara real-time. Tidak perlu registrasi sama sekali.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">💰</span>Apakah RuangOTP benar-benar gratis?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Ya, 100% gratis! Tidak ada registrasi, langganan, maupun biaya tersembunyi. Layanan ini didukung oleh iklan yang tidak mengganggu. Kamu bisa mengakses semua fitur tanpa membayar sepeser pun.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">📝</span>Apakah perlu membuat akun?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Tidak perlu sama sekali! RuangOTP tidak memerlukan registrasi. Langsung kunjungi website, pilih nomor, dan mulai menerima SMS. Kami percaya kemudahan akses adalah prioritas utama.</div>
+</div>
+</div>
+
+<div class="faq-group" data-cat="penggunaan">
+<div class="faq-group-title">📱 Penggunaan</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">⏱️</span>Mengapa SMS saya belum muncul?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">SMS biasanya muncul dalam hitungan detik, tapi bisa memakan waktu 2–3 menit. Jika belum muncul setelah menunggu, coba gunakan nomor lain atau segarkan halaman. Beberapa platform mungkin memblokir nomor virtual karena filter anti-spam mereka.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🔄</span>Bisakah menerima SMS berkali-kali ke nomor yang sama?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Bisa! Namun perlu diingat bahwa nomor dibagikan ke semua pengguna secara bersamaan. Kami menyarankan penggunaan hanya untuk verifikasi satu kali saja agar lebih efektif.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">✅</span>Layanan apa saja yang didukung?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Nomor kami berfungsi dengan sebagian besar layanan populer: WhatsApp, Telegram, Facebook, Instagram, Twitter/X, TikTok, Discord, dan ratusan platform lainnya. Layanan perbankan dan keuangan biasanya memblokir nomor virtual karena alasan keamanan.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🌍</span>Berapa banyak negara yang tersedia?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Saat ini tersedia lebih dari 25 negara termasuk Amerika Serikat, Inggris, Kanada, Indonesia, India, Nigeria, Filipina, Pakistan, dan masih banyak lagi. Kami terus menambahkan negara baru berdasarkan permintaan pengguna.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">⏰</span>Berapa lama pesan disimpan?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Pesan SMS otomatis dihapus setelah 24–48 jam untuk alasan privasi dan penyimpanan. Pastikan kamu menyimpan kode verifikasi penting sebelum terhapus!</div>
+</div>
+</div>
+
+<div class="faq-group" data-cat="teknis">
+<div class="faq-group-title">⚙️ Teknis</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🚫</span>Mengapa nomor diblokir atau dihapus?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Nomor mungkin diblokir sementara jika menerima terlalu banyak pesan atau terdeteksi spam. Biasanya akan dirotasi kembali setelah masa pemulihan. Kami rutin memperbarui kumpulan nomor untuk menjaga kualitas layanan.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">📲</span>Apakah RuangOTP bisa digunakan di HP?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Tentu saja! RuangOTP sepenuhnya responsif dan berfungsi sempurna di smartphone, tablet, maupun desktop. Tampilannya dioptimalkan untuk semua ukuran layar.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🔌</span>Apakah tersedia API?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Saat ini belum tersedia API publik. Jika tertarik dengan akses API untuk keperluan pengembangan atau bisnis, silakan hubungi kami melalui halaman <a href="contact.html">Kontak</a> dengan detail proyek kamu.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🐛</span>Bagaimana cara melaporkan bug?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Kirim email ke <a href="mailto:jeeyhosting@gmail.com">jeeyhosting@gmail.com</a> atau hubungi kami via Telegram <a href="https://t.me/marketplaceclcretator" target="_blank">@marketplaceclcretator</a> dengan detail bug: browser, perangkat, dan langkah reproduksi. Kami sangat menghargai setiap laporan!</div>
+</div>
+</div>
+
+<div class="faq-group" data-cat="privasi">
+<div class="faq-group-title">🔒 Privasi & Keamanan</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">👀</span>Apakah pesan bersifat pribadi?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a"><strong>Tidak!</strong> Semua pesan bersifat PUBLIK dan dapat dilihat oleh siapa saja. Jangan pernah gunakan layanan ini untuk menerima informasi sensitif seperti data perbankan, kata sandi penting, dokumen pemerintah, atau data pribadi apapun.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">⚠️</span>Apa yang TIDAK boleh dilakukan dengan RuangOTP?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Jangan pernah gunakan RuangOTP untuk menerima: informasi perbankan atau kartu kredit, kata sandi akun penting, data kesehatan atau medis, dokumen atau identitas pemerintah, nomor jaminan sosial, informasi pajak, atau data rahasia apapun. Gunakan hanya untuk verifikasi sementara yang tidak sensitif.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">🛡️</span>Apakah RuangOTP aman digunakan?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Aman untuk keperluan verifikasi non-sensitif. Ingat bahwa semua pesan bersifat publik. Gunakan hanya untuk uji coba aplikasi, pendaftaran sementara, atau verifikasi yang tidak penting. Jangan bagikan informasi sensitif melalui layanan ini.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<div class="faq-q-text"><span class="faq-q-icon">📊</span>Apakah aktivitas saya dilacak?</div>
+<span class="faq-toggle">+</span>
+</div>
+<div class="faq-a">Kami hanya menggunakan analitik minimal (Google Analytics) untuk memahami trafik dan meningkatkan layanan. Kami tidak mengumpulkan informasi pribadi atau melacak pengguna secara individual. Lihat <a href="privacy.html">Kebijakan Privasi</a> kami untuk detail lengkap.</div>
+</div>
+</div>
+
+<div class="cta-box">
+<h3>Tidak menemukan jawaban?</h3>
+<p>Tim kami siap membantu kamu secara langsung</p>
+<a href="contact.html" class="cta-btn">💬 Hubungi Kami</a>
+</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>RuangOTP</h4><p>Layanan nomor virtual gratis untuk verifikasi SMS & OTP. Tanpa registrasi, 100% gratis.</p></div>
+<div class="footer-col"><h4>Navigasi</h4><a href="index.html">Beranda</a><a href="faq.html">FAQ</a><a href="contact.html">Kontak</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="privacy.html">Kebijakan Privasi</a><a href="terms.html">Syarat Layanan</a></div>
+<div class="footer-col"><h4>Komunitas</h4><a href="https://t.me/marketplaceclcretator" target="_blank">📱 Telegram</a><a href="https://t.me/JeeyInformasi" target="_blank">📲 Saluran Nomor</a></div>
+</div>
+<div class="footer-bottom">© 2026 RuangOTP — Developer: <span class="footer-credit">@Jeeyhosting</span></div>
+</footer>
+
+<script>
+(function(){var ua=navigator.userAgent||'';var bl=['HTTrack','wget','curl','python-requests','WebCopier','Teleport','SiteSucker','scrapy','libwww'];for(var i=0;i<bl.length;i++){if(ua.toLowerCase().indexOf(bl[i].toLowerCase())!==-1){document.documentElement.innerHTML='<h1 style="font-family:monospace;padding:40px">403 Forbidden</h1>';throw new Error('blocked')}}document.addEventListener('contextmenu',function(e){e.preventDefault()});document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&(e.key==='s'||e.key==='u')){e.preventDefault()}if(e.key==='F12'){e.preventDefault()}})})();
+const savedTheme=localStorage.getItem('rc_theme')||'dark';
+document.body.setAttribute('data-theme',savedTheme);
+document.getElementById('themeIcon').textContent=savedTheme==='dark'?'☀️':'🌙';
+function toggleTheme(){const c=document.body.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.body.setAttribute('data-theme',n);localStorage.setItem('rc_theme',n);document.getElementById('themeIcon').textContent=n==='dark'?'☀️':'🌙'}
+function toggleFaq(el){const item=el.closest('.faq-item');item.classList.toggle('open')}
+function cariFaq(){
+const q=document.getElementById('searchFaq').value.toLowerCase().trim();
+document.querySelectorAll('.faq-item').forEach(item=>{
+const teks=item.textContent.toLowerCase();
+item.style.display=(!q||teks.includes(q))?'':'none';
+});
+document.querySelectorAll('.faq-group').forEach(g=>{
+const ada=Array.from(g.querySelectorAll('.faq-item')).some(i=>i.style.display!=='none');
+g.style.display=ada?'':'none';
+});
+}
+function filterKategori(cat,btn){
+document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+document.querySelectorAll('.faq-group').forEach(g=>{
+g.style.display=(cat==='all'||g.dataset.cat===cat)?'':'none';
+});
+document.getElementById('searchFaq').value='';
+document.querySelectorAll('.faq-item').forEach(i=>i.style.display='');
+}
+</script>
+</body>
+</html>

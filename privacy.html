@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive, nosnippet, noimageindex">
+<title>Kebijakan Privasi | RuangOTP</title>
+<meta name="description" content="Kebijakan privasi layanan RuangOTP. Pelajari bagaimana kami melindungi privasi kamu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#080b12;--bg2:#0e1320;--bg3:#141926;--bg4:#1a2133;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.11);--text:#dde3f0;--text2:#7a869e;--text3:#4a5568;--accent:#5b7fff;--accent2:#3d5edb;--accent3:rgba(91,127,255,0.12);--green:#2dd4a0;--green2:rgba(45,212,160,0.12);--yellow:rgba(246,173,85,0.1);--yellow-border:rgba(246,173,85,0.25);--font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--r:16px;--r-sm:10px;--nav-h:60px}
+[data-theme="light"]{--bg:#f2f4fa;--bg2:#ffffff;--bg3:#eaecf5;--bg4:#e0e4f0;--border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.13);--text:#111827;--text2:#6b7280;--text3:#9ca3af}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7;overflow-x:hidden;transition:background .3s,color .3s}
+::selection{background:rgba(91,127,255,0.3);color:var(--text)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:99px}
+header{position:sticky;top:0;z-index:300;background:rgba(8,11,18,0.85);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+[data-theme="light"] header{background:rgba(242,244,250,0.85)}
+nav{max-width:1320px;margin:0 auto;padding:0 16px;height:var(--nav-h);display:flex;align-items:center;gap:10px}
+.logo{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;display:flex;align-items:center;gap:6px;text-decoration:none}
+.logo-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-link{padding:7px 12px;border-radius:var(--r-sm);font-size:12px;font-weight:600;color:var(--text2);text-decoration:none;transition:all .2s}
+.nav-link:hover{background:var(--accent3);color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:6px;margin-left:8px}
+.nav-btn{display:flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:pointer;font-size:13px;background:transparent;color:var(--text2);transition:all .2s;height:34px;min-width:34px}
+.nav-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.page-hero{background:linear-gradient(135deg,rgba(91,127,255,0.07),rgba(45,212,160,0.03));border-bottom:1px solid var(--border);padding:48px 20px 40px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(91,127,255,0.07),transparent 70%);pointer-events:none}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent3);border:1px solid rgba(91,127,255,0.2);padding:5px 12px;border-radius:99px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.5px;margin-bottom:14px;text-transform:uppercase}
+.page-hero h1{font-size:clamp(22px,4vw,38px);font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;background:linear-gradient(135deg,var(--text) 50%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{font-size:14px;color:var(--text2);max-width:500px;margin:0 auto}
+.container{max-width:800px;margin:0 auto;padding:40px 16px 80px}
+.update-pill{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border2);border-radius:99px;padding:6px 14px;font-size:12px;color:var(--text2);margin-bottom:32px}
+.update-pill strong{color:var(--text)}
+.toc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
+.toc h3{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);margin-bottom:12px}
+.toc ol{padding-left:18px}
+.toc li{margin-bottom:6px}
+.toc a{font-size:13px;color:var(--accent);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.section{margin-bottom:36px}
+.section h2{font-size:18px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:10px;padding-top:8px}
+.section h2 span{font-size:20px}
+.section h3{font-size:14px;font-weight:700;color:var(--text);margin:14px 0 8px}
+.section p{font-size:13px;color:var(--text2);margin-bottom:10px;line-height:1.75}
+.section ul,.section ol{padding-left:20px;margin-bottom:12px}
+.section li{font-size:13px;color:var(--text2);margin-bottom:6px;line-height:1.65}
+.section a{color:var(--accent);text-decoration:none}
+.section a:hover{text-decoration:underline}
+.alert-box{border-radius:var(--r);padding:16px 20px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.alert-box.warning{background:var(--yellow);border:1px solid var(--yellow-border)}
+.alert-box.danger{background:rgba(245,101,101,0.08);border:1px solid rgba(245,101,101,0.2)}
+.alert-box.info{background:var(--accent3);border:1px solid rgba(91,127,255,0.2)}
+.alert-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.alert-text{font-size:13px;color:var(--text2);line-height:1.65}
+.alert-text strong{color:var(--text)}
+.alert-text ul{padding-left:16px;margin-top:8px}
+.alert-text li{margin-bottom:4px}
+hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 16px 20px}
+.footer-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px 16px;margin-bottom:20px}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.footer-col p,.footer-col a{font-size:12px;color:var(--text2);text-decoration:none;display:block;margin-bottom:6px;transition:color .2s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{max-width:1320px;margin:0 auto;padding-top:16px;border-top:1px solid var(--border);text-align:center;font-size:10px;color:var(--text3)}
+.footer-credit{color:var(--accent);font-weight:600}
+@media(min-width:768px){.footer-inner{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+<nav>
+<a href="index.html" class="logo"><span class="logo-dot"></span>Ruang<span>OTP</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-link">Beranda</a>
+<a href="faq.html" class="nav-link">FAQ</a>
+<a href="contact.html" class="nav-link">Kontak</a>
+</div>
+<div class="nav-right">
+<button class="nav-btn" onclick="toggleTheme()" title="Ganti Tema"><span id="themeIcon">☀️</span></button>
+</div>
+</nav>
+</header>
+
+<div class="page-hero">
+<div class="page-hero-badge">🔒 Legal</div>
+<h1>Kebijakan Privasi</h1>
+<p>Privasi kamu penting bagi kami. Pelajari bagaimana kami mengelola data dan melindungi penggunanya.</p>
+</div>
+
+<div class="container">
+<div class="update-pill">📅 <strong>Terakhir Diperbarui:</strong> 10 Mei 2026</div>
+
+<div class="alert-box danger">
+<div class="alert-icon">⚠️</div>
+<div class="alert-text"><strong>Perhatian Penting:</strong> RuangOTP adalah layanan PUBLIK. Semua nomor telepon dan pesan SMS yang ditampilkan dapat diakses oleh siapa saja. JANGAN gunakan layanan ini untuk menerima informasi sensitif atau pribadi.</div>
+</div>
+
+<div class="toc">
+<h3>Daftar Isi</h3>
+<ol>
+<li><a href="#s1">Pendahuluan</a></li>
+<li><a href="#s2">Informasi yang Kami Kumpulkan</a></li>
+<li><a href="#s3">Cara Penggunaan Informasi</a></li>
+<li><a href="#s4">Berbagi Data</a></li>
+<li><a href="#s5">Cookie & Pelacakan</a></li>
+<li><a href="#s6">Retensi Data</a></li>
+<li><a href="#s7">Hak Privasi Kamu</a></li>
+<li><a href="#s8">Keamanan</a></li>
+<li><a href="#s9">Privasi Anak</a></li>
+<li><a href="#s10">Kontak</a></li>
+</ol>
+</div>
+
+<div class="section" id="s1">
+<h2><span>📋</span> 1. Pendahuluan</h2>
+<p>Selamat datang di RuangOTP. Kami berkomitmen untuk melindungi privasi kamu dan memastikan transparansi dalam cara kami mengoperasikan layanan nomor virtual gratis ini.</p>
+<p>Kebijakan Privasi ini menjelaskan informasi apa yang kami kumpulkan, bagaimana penggunaannya, dan hak-hak kamu terkait data saat menggunakan layanan kami.</p>
+</div>
+
+<hr>
+
+<div class="section" id="s2">
+<h2><span>📊</span> 2. Informasi yang Kami Kumpulkan</h2>
+<h3>2.1 Informasi yang Kamu Berikan</h3>
+<p><strong>Tidak ada.</strong> RuangOTP tidak memerlukan registrasi atau login. Kami tidak mengumpulkan informasi pribadi seperti nama, email, atau nomor telepon dari pengguna.</p>
+<h3>2.2 Informasi yang Dikumpulkan Otomatis</h3>
+<p>Saat kamu mengunjungi website kami, kami mungkin mengumpulkan secara otomatis:</p>
+<ul>
+<li><strong>Informasi Browser:</strong> Jenis, versi, dan pengaturan browser</li>
+<li><strong>Informasi Perangkat:</strong> Jenis perangkat dan sistem operasi</li>
+<li><strong>Data Penggunaan:</strong> Halaman yang dikunjungi, waktu akses, fitur yang digunakan</li>
+<li><strong>Alamat IP:</strong> Hanya untuk keperluan analitik dan keamanan</li>
+<li><strong>Cookie:</strong> File teks kecil untuk fungsionalitas dan preferensi</li>
+</ul>
+<h3>2.3 Data SMS Publik</h3>
+<p>Semua SMS yang diterima pada nomor virtual kami bersifat:</p>
+<ul>
+<li>Ditampilkan secara publik di website</li>
+<li>Dapat diakses oleh semua pengunjung</li>
+<li>Tidak dienkripsi atau bersifat privat</li>
+<li>Dihapus otomatis setelah 24–48 jam</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="section" id="s3">
+<h2><span>🎯</span> 3. Cara Penggunaan Informasi</h2>
+<p>Data terbatas yang kami kumpulkan hanya digunakan untuk:</p>
+<ul>
+<li>Menyediakan dan memelihara layanan gratis kami</li>
+<li>Meningkatkan pengalaman pengguna dan fungsionalitas</li>
+<li>Menganalisis pola penggunaan dan statistik trafik</li>
+<li>Mencegah penyalahgunaan dan memastikan keamanan layanan</li>
+<li>Mematuhi kewajiban hukum yang berlaku</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="section" id="s4">
+<h2><span>🔗</span> 4. Berbagi Data</h2>
+<h3>4.1 Informasi Publik</h3>
+<p>Semua nomor telepon dan pesan SMS di RuangOTP bersifat PUBLIK dan dapat dilihat siapa saja. Ini adalah fungsi inti dari layanan kami.</p>
+<h3>4.2 Layanan Pihak Ketiga</h3>
+<p>Kami menggunakan layanan pihak ketiga untuk:</p>
+<ul>
+<li><strong>Analitik:</strong> Google Analytics (data anonim)</li>
+<li><strong>Hosting:</strong> Penyedia layanan cloud</li>
+<li><strong>Keamanan:</strong> Layanan perlindungan DDoS</li>
+</ul>
+<h3>4.3 Persyaratan Hukum</h3>
+<p>Kami dapat mengungkapkan informasi jika diwajibkan oleh hukum, perintah pengadilan, atau regulasi pemerintah.</p>
+</div>
+
+<hr>
+
+<div class="section" id="s5">
+<h2><span>🍪</span> 5. Cookie & Pelacakan</h2>
+<p>Kami menggunakan cookie untuk:</p>
+<ul>
+<li>Mengingat preferensi tema (mode gelap/terang)</li>
+<li>Mengingat pilihan bahasa kamu</li>
+<li>Menganalisis trafik dan penggunaan website</li>
+</ul>
+<p>Kamu dapat menonaktifkan cookie di pengaturan browser, namun ini mungkin memengaruhi fungsionalitas website.</p>
+</div>
+
+<hr>
+
+<div class="section" id="s6">
+<h2><span>⏱️</span> 6. Retensi Data</h2>
+<ul>
+<li><strong>Pesan SMS:</strong> Dihapus otomatis setelah 24–48 jam</li>
+<li><strong>Nomor Virtual:</strong> Dirotasi secara berkala untuk kualitas layanan</li>
+<li><strong>Data Analitik:</strong> Disimpan 14 bulan (default Google Analytics)</li>
+<li><strong>Log Server:</strong> Disimpan 30 hari untuk keperluan keamanan</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="section" id="s7">
+<h2><span>⚖️</span> 7. Hak Privasi Kamu</h2>
+<p>Kamu berhak untuk mengetahui data apa yang kami kumpulkan dan bagaimana penggunaannya. Karena kami tidak mengumpulkan data pribadi, tidak ada informasi pribadi yang perlu diakses atau dihapus. Kamu juga dapat memilih keluar dari cookie menggunakan pengaturan browser atau ekstensi privasi.</p>
+</div>
+
+<hr>
+
+<div class="section" id="s8">
+<h2><span>🛡️</span> 8. Keamanan</h2>
+<p>Kami menerapkan langkah-langkah keamanan untuk melindungi layanan:</p>
+<ul>
+<li>Enkripsi HTTPS untuk trafik website</li>
+<li>Audit keamanan dan pembaruan rutin</li>
+<li>Perlindungan DDoS dan firewall</li>
+<li>Pembatasan laju untuk mencegah penyalahgunaan</li>
+</ul>
+<div class="alert-box warning">
+<div class="alert-icon">⚠️</div>
+<div class="alert-text">Tidak ada transmisi internet yang 100% aman. Gunakan layanan kami dengan bijak hanya untuk keperluan non-sensitif.</div>
+</div>
+</div>
+
+<hr>
+
+<div class="section" id="s9">
+<h2><span>👶</span> 9. Privasi Anak</h2>
+<p>RuangOTP tidak ditujukan untuk anak di bawah 13 tahun. Kami tidak secara sengaja mengumpulkan informasi dari anak-anak. Jika kamu menduga ada anak yang menggunakan layanan ini, silakan hubungi kami.</p>
+</div>
+
+<hr>
+
+<div class="section" id="s10">
+<h2><span>📬</span> 10. Kontak</h2>
+<p>Jika kamu memiliki pertanyaan tentang Kebijakan Privasi ini, hubungi kami:</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:jeeyhosting@gmail.com">jeeyhosting@gmail.com</a></li>
+<li><strong>Telegram:</strong> <a href="https://t.me/JeeyInformasi" target="_blank">@JeeyInformasi</a></li>
+</ul>
+</div>
+
+<div class="alert-box danger">
+<div class="alert-icon">🔓</div>
+<div class="alert-text"><strong>Pengingat Penting:</strong> RuangOTP adalah layanan PUBLIK. Jangan pernah gunakan untuk menerima:
+<ul>
+<li>Informasi perbankan atau kartu kredit</li>
+<li>Kata sandi atau kode keamanan penting</li>
+<li>Data medis atau kesehatan</li>
+<li>Dokumen atau identitas pemerintah</li>
+<li>Informasi pribadi sensitif apapun</li>
+</ul>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>RuangOTP</h4><p>Layanan nomor virtual gratis untuk verifikasi SMS & OTP. Tanpa registrasi, 100% gratis.</p></div>
+<div class="footer-col"><h4>Navigasi</h4><a href="index.html">Beranda</a><a href="faq.html">FAQ</a><a href="contact.html">Kontak</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="privacy.html">Kebijakan Privasi</a><a href="terms.html">Syarat Layanan</a></div>
+<div class="footer-col"><h4>Komunitas</h4><a href="https://t.me/JeeyInformasi" target="_blank">📱 Telegram</a><a href="https://t.me/JeeyInformasi" target="_blank">📲 Saluran Nomor</a></div>
+</div>
+<div class="footer-bottom">© 2026 RuangOTP — Developer: <span class="footer-credit">@Jeeyhosting</span></div>
+</footer>
+
+<script>
+(function(){var ua=navigator.userAgent||'';var bl=['HTTrack','wget','curl','python-requests','WebCopier','Teleport','SiteSucker','scrapy','libwww'];for(var i=0;i<bl.length;i++){if(ua.toLowerCase().indexOf(bl[i].toLowerCase())!==-1){document.documentElement.innerHTML='<h1 style="font-family:monospace;padding:40px">403 Forbidden</h1>';throw new Error('blocked')}}document.addEventListener('contextmenu',function(e){e.preventDefault()});document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&(e.key==='s'||e.key==='u')){e.preventDefault()}if(e.key==='F12'){e.preventDefault()}})})();
+const savedTheme=localStorage.getItem('rc_theme')||'dark';
+document.body.setAttribute('data-theme',savedTheme);
+document.getElementById('themeIcon').textContent=savedTheme==='dark'?'☀️':'🌙';
+function toggleTheme(){const c=document.body.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.body.setAttribute('data-theme',n);localStorage.setItem('rc_theme',n);document.getElementById('themeIcon').textContent=n==='dark'?'☀️':'🌙'}
+</script>
+</body>
+</html>
