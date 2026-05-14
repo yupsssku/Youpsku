@@ -1,1 +1,803 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noarchive">
+<title>RuangOTP — Nomor Virtual & Penerima SMS Gratis</title>
+<meta name="description" content="Nomor telepon virtual gratis dari 25+ negara. Terima SMS & OTP instan untuk WhatsApp, Telegram, verifikasi. Tanpa registrasi. By Jeeyhosting.">
+<meta name="keywords" content="nomor virtual gratis, terima SMS online, OTP gratis, nomor sementara, verifikasi SMS">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+input,textarea,.number,.otp-code,.otp-message{-webkit-user-select:text;user-select:text}
+:root{
+--bg:#080b12;
+--bg2:#0e1320;
+--bg3:#141926;
+--bg4:#1a2133;
+--border:rgba(255,255,255,0.06);
+--border2:rgba(255,255,255,0.11);
+--text:#dde3f0;
+--text2:#7a869e;
+--text3:#4a5568;
+--accent:#5b7fff;
+--accent2:#3d5edb;
+--accent3:rgba(91,127,255,0.12);
+--green:#2dd4a0;
+--green2:rgba(45,212,160,0.12);
+--red:#f56565;
+--orange:#f6ad55;
+--card-shadow:0 8px 32px rgba(0,0,0,0.45);
+--font:'Inter',sans-serif;
+--mono:'JetBrains Mono',monospace;
+--r:16px;
+--r-sm:10px;
+--r-xs:6px;
+--nav-h:60px;
+}
+[data-theme="light"]{
+--bg:#f2f4fa;--bg2:#ffffff;--bg3:#eaecf5;--bg4:#e0e4f0;
+--border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.13);
+--text:#111827;--text2:#6b7280;--text3:#9ca3af;
+--card-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+::selection{background:rgba(91,127,255,0.3);color:var(--text)}
 
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:99px}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:300;background:rgba(8,11,18,0.85);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+[data-theme="light"] header{background:rgba(242,244,250,0.85)}
+nav{max-width:1320px;margin:0 auto;padding:0 12px;height:var(--nav-h);display:flex;align-items:center;gap:8px;overflow:hidden}
+.logo{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:6px}
+.logo-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
+.logo span{color:var(--text)}
+.tabs{display:flex;gap:2px;padding:3px;background:var(--bg3);border-radius:var(--r-sm);flex:1;justify-content:center;max-width:280px;margin:0 auto}
+.tab-btn{padding:6px 14px;border:none;border-radius:7px;cursor:pointer;font-family:var(--font);font-size:12px;font-weight:600;background:transparent;color:var(--text2);transition:all .2s;flex:1;text-align:center;white-space:nowrap}
+.tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(91,127,255,0.35)}
+.nav-right{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.nav-btn{display:flex;align-items:center;justify-content:center;gap:4px;padding:7px 10px;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:pointer;font-family:var(--font);font-size:12px;font-weight:600;background:transparent;color:var(--text2);transition:all .2s;white-space:nowrap;height:34px;min-width:34px}
+.nav-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.nav-btn .icon{font-size:14px;line-height:1}
+.lang-text{display:none}
+@media(min-width:480px){.lang-text{display:inline}}
+
+/* ===== LANG DROPDOWN ===== */
+.lang-wrap{position:static}
+.lang-menu{display:none;position:fixed;right:8px;top:calc(var(--nav-h) + 6px);background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-sm);min-width:160px;z-index:9999;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.lang-menu.open{display:block}
+.lang-opt{padding:10px 14px;cursor:pointer;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;transition:background .15s;color:var(--text)}
+.lang-opt:hover{background:var(--bg3)}
+.lang-opt.active{color:var(--accent);font-weight:700}
+
+/* ===== MAIN ===== */
+main{max-width:1320px;margin:0 auto;padding:20px 12px 100px}
+
+/* ===== HERO ===== */
+.hero{text-align:center;padding:36px 20px 28px;background:linear-gradient(135deg,rgba(91,127,255,0.07) 0%,rgba(45,212,160,0.03) 60%,transparent 100%);border-radius:20px;margin-bottom:24px;border:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(91,127,255,0.08),transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent3);border:1px solid rgba(91,127,255,0.2);padding:5px 12px;border-radius:99px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.5px;margin-bottom:14px;text-transform:uppercase}
+.hero h1{font-size:clamp(20px,4.5vw,42px);font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;background:linear-gradient(135deg,var(--text) 50%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.25}
+.hero p{font-size:14px;color:var(--text2);max-width:520px;margin:0 auto 20px}
+.hero-stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero-stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);padding:8px 16px;display:flex;align-items:center;gap:8px}
+.hero-stat-num{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--accent)}
+.hero-stat-lbl{font-size:11px;color:var(--text2)}
+
+/* ===== SEARCH ===== */
+.search-wrap{display:flex;gap:8px;margin-bottom:20px;align-items:center}
+.search-inner{flex:1;position:relative}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--text2);fill:none;pointer-events:none}
+.search-input{width:100%;padding:11px 13px 11px 38px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-sm);color:var(--text);font-family:var(--font);font-size:13px;transition:border-color .2s,box-shadow .2s;outline:none}
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,127,255,0.1)}
+.search-input::placeholder{color:var(--text3)}
+.live-pill{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-sm);font-size:12px;color:var(--text2);font-weight:500;white-space:nowrap;flex-shrink:0}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ===== SECTIONS ===== */
+.view-section{display:none}
+.view-section.active{display:block}
+
+/* ===== SECTION LABEL ===== */
+.section-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ===== COUNTRY GRID ===== */
+.countries-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
+
+.country-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px 16px;cursor:pointer;transition:all .22s ease;position:relative;overflow:hidden}
+.country-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--green));opacity:0;transition:opacity .22s}
+.country-card:hover{border-color:rgba(91,127,255,0.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(91,127,255,0.12)}
+.country-card:hover::after{opacity:0.04}
+.country-card:active{transform:translateY(-1px)}
+.cc-flag{font-size:34px;margin-bottom:10px;display:block;line-height:1;position:relative;z-index:1}
+.cc-name{font-size:13px;font-weight:700;margin-bottom:3px;color:var(--text);position:relative;z-index:1}
+.cc-meta{display:flex;align-items:center;gap:6px;margin-top:10px;flex-wrap:wrap;position:relative;z-index:1}
+.cc-count{font-size:10px;font-weight:700;font-family:var(--mono);background:var(--accent3);color:var(--accent);padding:2px 8px;border-radius:99px}
+.cc-otp-badge{font-size:10px;font-weight:700;background:var(--green2);color:var(--green);padding:2px 8px;border-radius:99px;display:none;align-items:center;gap:3px}
+.cc-otp-badge.visible{display:inline-flex}
+.cc-arrow{margin-left:auto;color:var(--text3);font-size:16px;transition:all .2s;position:relative;z-index:1}
+.country-card:hover .cc-arrow{transform:translateX(3px);color:var(--accent)}
+
+/* ===== COUNTRY DETAIL ===== */
+.back-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:pointer;margin-bottom:16px;font-family:var(--font);font-size:12px;font-weight:600;background:var(--bg2);color:var(--text2);transition:all .2s}
+.back-btn:hover{border-color:var(--accent);color:var(--accent)}
+.country-detail-header{display:flex;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:16px;flex-wrap:wrap}
+.cdh-flag{font-size:44px;line-height:1;flex-shrink:0}
+.cdh-info{flex:1;min-width:0}
+.cdh-info h2{font-size:20px;font-weight:700;margin-bottom:4px}
+.cdh-info p{font-size:12px;color:var(--text2)}
+.cdh-search{width:100%;margin-top:12px;position:relative}
+.cdh-search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;stroke:var(--text2);fill:none;stroke-width:2;pointer-events:none}
+.cdh-search input{width:100%;padding:9px 12px 9px 34px}
+@media(min-width:600px){.country-detail-header{flex-wrap:nowrap}.cdh-search{width:auto;flex:1;min-width:200px;margin-top:0;margin-left:auto}}
+.numbers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:20px}
+.number-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px 18px;transition:all .2s}
+.number-card:hover{border-color:var(--border2);box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+.number-val{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--text);margin-bottom:14px;letter-spacing:-0.3px;word-break:break-all}
+.number-actions{display:flex;gap:7px}
+.btn{flex:1;padding:9px 10px;border:none;border-radius:var(--r-sm);cursor:pointer;font-family:var(--font);font-size:12px;font-weight:600;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:5px;touch-action:manipulation}
+.btn-copy{background:var(--accent3);color:var(--accent)}
+.btn-copy:hover{background:var(--accent);color:#fff}
+.btn-otp{background:var(--green2);color:var(--green)}
+.btn-otp:hover{background:var(--green);color:#fff}
+
+/* ===== OTP FEED ===== */
+.otp-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.otp-select{padding:8px 12px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-sm);color:var(--text);font-family:var(--font);font-size:12px;cursor:pointer;flex:1;min-width:120px;max-width:180px;outline:none}
+.otp-select:focus{border-color:var(--accent)}
+.otp-search-wrap{flex:2;min-width:150px;position:relative}
+.otp-search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;fill:none;stroke:var(--text2);stroke-width:2;pointer-events:none}
+.refresh-btn{padding:8px 14px;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:pointer;background:var(--bg2);color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:5px;white-space:nowrap;flex-shrink:0;touch-action:manipulation}
+.refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+.refresh-btn.spinning svg{animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== OTP GRID ===== */
+.otp-grid{display:grid;gap:10px}
+.otp-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px;contain:layout style}
+.otp-card.is-new{animation:slideIn .25s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.otp-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:8px;flex-wrap:wrap}
+.otp-left{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.otp-flag{font-size:19px;line-height:1;flex-shrink:0}
+.otp-country{font-size:12px;font-weight:700;color:var(--text)}
+.otp-sender{font-size:10px;color:var(--text2);background:var(--bg4);padding:2px 8px;border-radius:99px;font-weight:600}
+.otp-time{font-size:10px;color:var(--text3);white-space:nowrap;flex-shrink:0}
+.otp-code-block{background:linear-gradient(135deg,rgba(91,127,255,.1),rgba(91,127,255,.04));border:1px solid rgba(91,127,255,.18);border-radius:var(--r-sm);padding:10px 14px;margin-bottom:10px;text-align:center;cursor:pointer;transition:all .15s}
+.otp-code-block:hover{background:rgba(91,127,255,.16);transform:scale(1.01)}
+.otp-code-block:active{background:rgba(91,127,255,.22)}
+.otp-code-lbl{font-size:9px;font-weight:700;letter-spacing:1.2px;color:var(--accent);text-transform:uppercase;margin-bottom:3px}
+.otp-code-val{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--accent);letter-spacing:5px}
+.otp-num-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;gap:8px}
+.otp-num-lbl{font-size:10px;color:var(--text3);flex-shrink:0}
+.otp-num-val{font-family:var(--mono);font-size:12px;color:var(--text);font-weight:600;word-break:break-all;text-align:right}
+.otp-msg{background:var(--bg3);border-radius:var(--r-xs);padding:9px 11px;font-size:11px;color:var(--text2);word-break:break-word;line-height:1.55;max-height:68px;overflow-y:auto;margin-bottom:10px;font-family:var(--mono);-webkit-overflow-scrolling:touch}
+.otp-copy-btn{width:100%;padding:8px;border:1px solid var(--border2);border-radius:var(--r-sm);background:transparent;color:var(--text2);font-family:var(--font);font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;touch-action:manipulation}
+.otp-copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* ===== STATS ROW ===== */
+.stats-row{display:flex;gap:8px;margin-bottom:20px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.stats-row::-webkit-scrollbar{display:none}
+.stat-pill{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.stat-num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:10px;color:var(--text2);font-weight:500}
+
+/* ===== MODAL ===== */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:500;overflow-y:auto;padding:16px;-webkit-overflow-scrolling:touch}
+.modal.open{display:flex;align-items:flex-start;justify-content:center}
+.modal-inner{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:22px;max-width:680px;width:100%;margin:20px auto;animation:modalIn .22s cubic-bezier(0.16,1,0.3,1)}
+@keyframes modalIn{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border);gap:8px}
+.modal-title{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.modal-close{width:34px;height:34px;border:none;background:var(--bg3);border-radius:50%;cursor:pointer;font-size:18px;color:var(--text2);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;touch-action:manipulation}
+.modal-close:hover{background:var(--accent);color:#fff;transform:rotate(90deg)}
+.modal-banner{background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:var(--r);padding:14px 18px;text-align:center;margin-bottom:16px;color:#fff}
+.modal-banner-lbl{font-size:10px;opacity:.8;margin-bottom:3px}
+.modal-banner-val{font-family:var(--mono);font-size:20px;font-weight:700;letter-spacing:1px;word-break:break-all}
+.modal-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:8px;flex-wrap:wrap}
+.modal-live{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--green);font-weight:600}
+.modal-live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+.modal-otp-count{font-size:10px;color:var(--text2)}
+.modal-refresh-btn{display:flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border2);border-radius:var(--r-sm);background:var(--bg3);color:var(--text2);font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;touch-action:manipulation}
+.modal-refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+.modal-refresh-btn.spinning svg{animation:spin .8s linear infinite}
+
+/* ===== EMPTY STATE ===== */
+.empty-state{text-align:center;padding:48px 20px;color:var(--text2)}
+.empty-icon{font-size:42px;margin-bottom:12px;opacity:.35}
+.empty-state h3{font-size:13px;font-weight:500;color:var(--text2)}
+
+/* ===== NOTIF ===== */
+.notif{position:fixed;top:72px;right:12px;left:12px;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--green);padding:10px 16px;border-radius:var(--r-sm);font-size:13px;font-weight:500;color:var(--text);box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:9999;display:none;max-width:360px;margin:0 auto}
+@media(min-width:500px){.notif{top:16px;right:16px;left:auto;margin:0}}
+.notif.show{display:block;animation:notifIn .2s ease}
+@keyframes notifIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+
+/* ===== TG FLOAT ===== */
+.tg-float{position:fixed;bottom:22px;right:16px;z-index:300;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#229ED9,#1a87be);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(34,158,217,.4);text-decoration:none;transition:all .3s}
+.tg-float:hover{transform:scale(1.1) translateY(-3px)}
+.tg-float svg{width:24px;height:24px;fill:#fff}
+
+/* ===== FOOTER ===== */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 12px 20px}
+.footer-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px 16px;margin-bottom:20px}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.footer-col p,.footer-col a{font-size:12px;color:var(--text2);text-decoration:none;display:block;margin-bottom:7px;transition:color .2s;word-break:break-word}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{max-width:1320px;margin:0 auto;padding-top:16px;border-top:1px solid var(--border);text-align:center;font-size:10px;color:var(--text3)}
+.footer-credit{color:var(--accent);font-weight:600}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:768px){
+:root{--nav-h:64px}
+nav{padding:0 20px;gap:12px}
+.logo{font-size:17px}
+.tab-btn{padding:7px 18px;font-size:13px}
+.nav-btn{padding:8px 14px;font-size:13px}
+main{padding:28px 20px 100px}
+.hero{padding:52px 24px 40px}
+.hero p{font-size:15px}
+.countries-grid{grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px}
+.numbers-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.footer-inner{grid-template-columns:repeat(4,1fr)}
+.notif{top:20px;right:20px;left:auto}
+.tg-float{width:52px;height:52px;bottom:28px;right:22px}
+.tg-float svg{width:26px;height:26px}
+}
+@media(max-width:380px){
+.tab-btn{padding:6px 8px;font-size:11px}
+.logo{font-size:14px}
+.countries-grid{grid-template-columns:repeat(2,1fr)}
+.nav-btn .lang-text{display:none}
+}
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+<nav>
+<div class="logo">
+<span class="logo-dot"></span>
+Ruang<span>OTP</span>
+</div>
+<div class="tabs">
+<button class="tab-btn active" onclick="gotoView('home')" id="tabHome">📞 Nomor</button>
+<button class="tab-btn" onclick="gotoView('otps')" id="tabOtps">🔑 OTP</button>
+</div>
+<div class="nav-right">
+<div class="lang-wrap">
+<button class="nav-btn" onclick="toggleLang()">
+<span class="icon">🌐</span>
+<span id="langLabel" class="lang-text">ID</span>
+</button>
+<div class="lang-menu" id="langMenu">
+<div class="lang-opt" onclick="setLang('en')">🇬🇧 English</div>
+<div class="lang-opt active" onclick="setLang('id')">🇮🇩 Bahasa Indonesia</div>
+<div class="lang-opt" onclick="setLang('ur')">🇵🇰 اردو</div>
+<div class="lang-opt" onclick="setLang('es')">🇪🇸 Español</div>
+<div class="lang-opt" onclick="setLang('ar')">🇸🇦 العربية</div>
+</div>
+</div>
+<button class="nav-btn" onclick="toggleTheme()" title="Ganti Tema">
+<span class="icon" id="themeIcon">☀️</span>
+</button>
+</div>
+</nav>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="hero-badge">⚡ Selalu Aktif & Gratis</div>
+<h1 id="heroTitle">Nomor Virtual Gratis & Penerima SMS Online</h1>
+<p id="heroDesc">Dapatkan nomor dari 25+ negara. Terima SMS & OTP secara instan — tanpa registrasi, tanpa biaya.</p>
+<div class="hero-stats">
+<div class="hero-stat"><div class="hero-stat-num" id="statNomor">0</div><div class="hero-stat-lbl">Nomor Aktif</div></div>
+<div class="hero-stat"><div class="hero-stat-num" id="statNegara">0</div><div class="hero-stat-lbl">Negara</div></div>
+<div class="hero-stat"><div class="hero-stat-num" id="statOtp">0</div><div class="hero-stat-lbl">OTP Hari Ini</div></div>
+</div>
+</section>
+
+<!-- ===== SEARCH ===== -->
+<div class="search-wrap">
+<div class="search-inner">
+<svg class="search-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input class="search-input" type="text" id="mainSearch" placeholder="Cari negara atau nomor..." oninput="onSearch()" autocomplete="off">
+</div>
+<div class="live-pill">
+<span class="live-dot" id="liveDot"></span>
+<span id="liveText">Aktif</span>
+</div>
+</div>
+
+<!-- ===== VIEW: BERANDA ===== -->
+<div id="viewHome" class="view-section active">
+<div class="section-label" id="negLbl">Pilih Negara</div>
+<div class="countries-grid" id="countriesGrid">
+<div class="empty-state"><div class="empty-icon">🌐</div><h3>Memuat data...</h3></div>
+</div>
+</div>
+
+<!-- ===== VIEW: DETAIL NEGARA ===== -->
+<div id="viewCountry" class="view-section">
+<button class="back-btn" onclick="kembali()">← Kembali</button>
+<div class="country-detail-header" id="detailHeader"></div>
+<div class="section-label">Nomor Telepon Tersedia</div>
+<div class="numbers-grid" id="numbersList"></div>
+</div>
+
+<!-- ===== VIEW: OTP FEED ===== -->
+<div id="viewOtps" class="view-section">
+<div class="stats-row">
+<div class="stat-pill"><div class="stat-num" id="otpCount">0</div><div class="stat-lbl">OTP Hari Ini</div></div>
+<div class="stat-pill"><div class="stat-num" id="otpNegCount">0</div><div class="stat-lbl">Negara Aktif</div></div>
+</div>
+<div class="otp-toolbar">
+<select class="otp-select" id="filterNegara" onchange="terapkanFilter()">
+<option value="all">🌍 Semua Negara</option>
+</select>
+<div class="otp-search-wrap">
+<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input class="search-input" type="text" id="otpSearch" placeholder="Cari OTP..." oninput="terapkanFilter()" autocomplete="off">
+</div>
+<button class="refresh-btn" onclick="refreshManual()" id="refreshBtn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+Segarkan
+</button>
+</div>
+<div class="otp-grid" id="otpGrid">
+<div class="empty-state"><div class="empty-icon">🔑</div><h3>Menunggu OTP masuk...</h3></div>
+</div>
+</div>
+
+</main>
+
+<!-- ===== MODAL OTP ===== -->
+<div class="modal" id="modalOtp">
+<div class="modal-inner">
+<div class="modal-head">
+<div class="modal-title" id="modalJudul">OTP</div>
+<button class="modal-close" onclick="tutupModal()">×</button>
+</div>
+<div class="modal-banner">
+<div class="modal-banner-lbl">Nomor Telepon</div>
+<div class="modal-banner-val" id="modalNomor"></div>
+</div>
+<div class="modal-toolbar">
+<div class="modal-live">
+<span class="modal-live-dot" id="modalLiveDot"></span>
+Aktif — memperbarui otomatis
+</div>
+<span class="modal-otp-count" id="modalJumlah"></span>
+<button class="modal-refresh-btn" id="modalRefreshBtn" onclick="refreshModal()">
+<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+Segarkan
+</button>
+</div>
+<div class="otp-grid" id="modalOtpList"></div>
+</div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>RuangOTP</h4>
+<p>Layanan nomor telepon virtual gratis untuk verifikasi SMS & OTP di seluruh dunia. Tanpa registrasi, 100% gratis.</p>
+</div>
+<div class="footer-col">
+<h4>Navigasi</h4>
+<a href="index.html">Beranda</a>
+<a href="faq.html">Pertanyaan Umum</a>
+<a href="contact.html">Kontak Kami</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="privacy.html">Kebijakan Privasi</a>
+<a href="terms.html">Syarat Layanan</a>
+</div>
+<div class="footer-col">
+<h4>Komunitas</h4>
+<a href="https://t.me/marketplaceclcretator" target="_blank">📱 Saluran Telegram</a>
+<a href="https://t.me/JeeyInformasi" target="_blank">📲 Saluran Nomor</a>
+<a href="https://t.me/JeeyInformasi" target="_blank">📲 WhatsApp</a>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 RuangOTP — Nomor Virtual Gratis & Penerima SMS &nbsp;|&nbsp; Developer: <span class="footer-credit">@Jeeyhosting</span>
+</div>
+</footer>
+
+<div class="notif" id="notif"></div>
+
+<a href="https://t.me/marketplaceclcretator" target="_blank" class="tg-float" title="Gabung Telegram">
+<svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.137.645-.501.804-.998.501l-2.753-2.028-1.329 1.279c-.147.147-.271.271-.556.271l.199-2.807 5.138-4.645c.223-.199-.049-.31-.346-.111l-6.344 3.997-2.734-.856c-.595-.187-.607-.595.124-.882l10.679-4.115c.496-.187.93.111.77.882z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   ANTI-COPY PROTECTION — by Jeeyhosting
+   ============================================================ */
+(function(){
+var _ua = navigator.userAgent||'';
+var _bl = ['HTTrack','wget','curl','python-requests','Java','libwww','lwp-trivial','Go-http','scrapy','Wget','curl','HTTracker','WebCopier','Teleport','SiteSucker','Offline Explorer','WinHTTrack','WebDevil','Website Copier','Website eXtractor'];
+for(var i=0;i<_bl.length;i++){
+if(_ua.toLowerCase().indexOf(_bl[i].toLowerCase())!==-1){
+document.documentElement.innerHTML='<h1 style="font-family:monospace;padding:40px">403 Forbidden</h1>';
+throw new Error('blocked');
+}
+}
+document.addEventListener('contextmenu',function(e){e.preventDefault()});
+document.addEventListener('keydown',function(e){
+if((e.ctrlKey||e.metaKey)&&(e.key==='s'||e.key==='u'||e.key==='S'||e.key==='U')){e.preventDefault()}
+if(e.key==='F12'){e.preventDefault()}
+});
+})();
+
+/* ============================================================
+   CONFIG
+   ============================================================ */
+const API='';
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let numbers=[], allOtps=[], activeView='home', selectedCountry=null;
+let otpTimer=null, lastFetch=0;
+let filterNeg='all', filterSearch='';
+let todayCount=parseInt(localStorage.getItem('rc_today')||'0');
+let todayDate=localStorage.getItem('rc_date')||'';
+let lang=localStorage.getItem('rc_lang')||'id';
+const domOtpIds=new Set(), domModalIds=new Set();
+let modalNomor=null, modalTimer=null;
+const OTP_IV=5000;
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const savedTheme=localStorage.getItem('rc_theme')||'dark';
+document.body.setAttribute('data-theme',savedTheme);
+document.getElementById('themeIcon').textContent=savedTheme==='dark'?'☀️':'🌙';
+function toggleTheme(){
+const c=document.body.getAttribute('data-theme');
+const n=c==='dark'?'light':'dark';
+document.body.setAttribute('data-theme',n);
+localStorage.setItem('rc_theme',n);
+document.getElementById('themeIcon').textContent=n==='dark'?'☀️':'🌙';
+}
+
+/* ============================================================
+   LANGUAGE
+   ============================================================ */
+const i18n={
+id:{heroTitle:'Nomor Virtual Gratis & Penerima SMS Online',heroDesc:'Dapatkan nomor dari 25+ negara. Terima SMS & OTP secara instan — tanpa registrasi, tanpa biaya.',negLbl:'Pilih Negara',search:'Cari negara atau nomor...'},
+en:{heroTitle:'Free Virtual Numbers & SMS Receiver Online',heroDesc:'Get free numbers from 25+ countries. Receive SMS & OTP instantly — no registration needed.',negLbl:'Select a Country',search:'Search country or number...'},
+ur:{heroTitle:'مفت ورچوئل نمبر اور SMS وصول آن لائن',heroDesc:'25+ ممالک سے مفت نمبر حاصل کریں۔ فوری SMS & OTP وصول کریں۔',negLbl:'ملک منتخب کریں',search:'ملک یا نمبر تلاش کریں...'},
+es:{heroTitle:'Números Virtuales Gratis y Receptor de SMS',heroDesc:'Obtén números gratis de 25+ países. Recibe SMS y OTP al instante.',negLbl:'Seleccionar País',search:'Buscar país o número...'},
+ar:{heroTitle:'أرقام افتراضية مجانية ومستقبل رسائل SMS',heroDesc:'احصل على أرقام مجانية من 25+ دولة.',negLbl:'اختر دولة',search:'ابحث...'}
+};
+const langNames={id:'ID',en:'EN',ur:'UR',es:'ES',ar:'AR'};
+function setLang(l){lang=l;localStorage.setItem('rc_lang',l);document.getElementById('langLabel').textContent=langNames[l]||l;document.getElementById('langMenu').classList.remove('open');terapkanBahasa();document.querySelectorAll('.lang-opt').forEach((el,i)=>{el.classList.toggle('active',['en','id','ur','es','ar'][i]===l)})}
+function toggleLang(){document.getElementById('langMenu').classList.toggle('open')}
+document.addEventListener('click',e=>{if(!e.target.closest('.lang-wrap'))document.getElementById('langMenu').classList.remove('open')});
+function terapkanBahasa(){
+const t=i18n[lang]||i18n.id;
+document.getElementById('heroTitle').textContent=t.heroTitle;
+document.getElementById('heroDesc').textContent=t.heroDesc;
+const nl=document.getElementById('negLbl');if(nl)nl.textContent=t.negLbl;
+const s=document.getElementById('mainSearch');if(s)s.placeholder=t.search;
+}
+
+/* ============================================================
+   VIEW
+   ============================================================ */
+function gotoView(v){
+document.querySelectorAll('.view-section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+activeView=v;
+document.getElementById('mainSearch').value='';
+if(v==='home'){document.getElementById('viewHome').classList.add('active');document.getElementById('tabHome').classList.add('active');hentikanOtp()}
+else if(v==='country'){document.getElementById('viewCountry').classList.add('active');document.getElementById('tabHome').classList.add('active');hentikanOtp()}
+else{document.getElementById('viewOtps').classList.add('active');document.getElementById('tabOtps').classList.add('active');ambilOtp();mulaiOtp()}
+}
+function kembali(){selectedCountry=null;gotoView('home')}
+
+/* ============================================================
+   NUMBERS
+   ============================================================ */
+async function muatNomor(){
+try{
+const r=await fetch(API+'/api/numbers');
+const d=await r.json();
+if(d.success){numbers=d.numbers;renderNegara();updateStatNomor()}
+}catch(e){console.error('Gagal memuat nomor',e)}
+}
+
+function kelompokNegara(nums){
+const m={};
+nums.forEach(n=>{const k=n.countryCode||n.country;if(!m[k])m[k]={name:n.country,flag:n.flag,code:n.countryCode,items:[]};m[k].items.push(n)});
+return Object.values(m);
+}
+
+function renderNegara(q=''){
+const grid=document.getElementById('countriesGrid');
+const ql=q.toLowerCase().trim();
+let gs;
+if(!ql){gs=kelompokNegara(numbers)}
+else{
+const byNeg=kelompokNegara(numbers).filter(g=>g.name.toLowerCase().includes(ql)||g.code.toLowerCase().includes(ql));
+const byNum=numbers.filter(n=>n.number.toLowerCase().includes(ql));
+const codes=new Set([...byNeg.map(g=>g.code),...byNum.map(n=>n.countryCode)]);
+gs=kelompokNegara(numbers.filter(n=>codes.has(n.countryCode)));
+}
+if(!gs.length){grid.innerHTML='<div class="empty-state"><div class="empty-icon">🌍</div><h3>Negara tidak ditemukan</h3></div>';return}
+grid.innerHTML=gs.map(g=>{
+const cnt=allOtps.filter(o=>o.country&&g.name&&o.country.toLowerCase().includes(g.name.toLowerCase().split(' ')[0])).length;
+const badge=cnt>0?`<span class="cc-otp-badge visible">🔑 ${cnt}</span>`:'<span class="cc-otp-badge"></span>';
+return`<div class="country-card" onclick="bukaDetail('${encodeURIComponent(JSON.stringify({code:g.code,name:g.name,flag:g.flag}))}')"><span class="cc-flag">${g.flag}</span><div class="cc-name">${g.name}</div><div class="cc-meta"><span class="cc-count">${g.items.length} #</span>${badge}<span class="cc-arrow">›</span></div></div>`
+}).join('');
+}
+
+function bukaDetail(enc){
+const meta=JSON.parse(decodeURIComponent(enc));
+selectedCountry=meta;
+document.getElementById('mainSearch').value='';
+renderDetail(meta);
+gotoView('country');
+}
+
+function renderDetail(meta,q=''){
+let nums=numbers.filter(n=>n.countryCode===meta.code);
+if(q)nums=nums.filter(n=>n.number.toLowerCase().includes(q.toLowerCase()));
+document.getElementById('detailHeader').innerHTML=`
+<span class="cdh-flag">${meta.flag}</span>
+<div class="cdh-info"><h2>${meta.name}</h2><p>${nums.length} nomor tersedia</p></div>
+<div class="cdh-search">
+<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input class="search-input" type="text" placeholder="Cari nomor..." oninput="renderDetail(selectedCountry,this.value)" autocomplete="off" value="${q}">
+</div>`;
+if(!nums.length){document.getElementById('numbersList').innerHTML='<div class="empty-state"><div class="empty-icon">📞</div><h3>Nomor tidak ditemukan</h3></div>';return}
+document.getElementById('numbersList').innerHTML=nums.map(n=>`
+<div class="number-card">
+<div class="number-val">${n.number}</div>
+<div class="number-actions">
+<button class="btn btn-copy" onclick="salinTeks('${n.number}','Nomor')">📋 Salin</button>
+<button class="btn btn-otp" onclick="lihatOtpNomor('${n.number}','${meta.name}','${meta.flag}')">🔍 OTP</button>
+</div>
+</div>`).join('');
+}
+
+function updateStatNomor(){
+const gs=kelompokNegara(numbers);
+document.getElementById('statNomor').textContent=numbers.length;
+document.getElementById('statNegara').textContent=gs.length;
+}
+
+/* ============================================================
+   OTPs
+   ============================================================ */
+function hariIni(){const d=new Date();return d.toISOString().slice(0,10)}
+function cekReset(){if(todayDate!==hariIni()){todayCount=0;todayDate=hariIni();localStorage.setItem('rc_today','0');localStorage.setItem('rc_date',todayDate)}}
+
+async function ambilOtp(){
+const now=Date.now();
+if(now-lastFetch<3000)return;
+lastFetch=now;
+cekReset();
+try{
+const awal=new Date();awal.setHours(0,0,0,0);
+const [r1,r2]=await Promise.all([fetch(API+'/api/otps?limit=100'),fetch(API+'/api/otps?limit=9999')]);
+const [d1,d2]=await Promise.all([r1.json(),r2.json()]);
+if(!d1.success)return;
+allOtps=d1.otps;
+const hari=(d2.otps||d1.otps).filter(o=>!o.timestamp||new Date(o.timestamp)>=awal);
+if(hari.length>todayCount){todayCount=hari.length;localStorage.setItem('rc_today',String(todayCount));localStorage.setItem('rc_date',hariIni())}
+document.getElementById('statOtp').textContent=todayCount;
+document.getElementById('otpCount').textContent=todayCount;
+if(activeView==='otps'){updateStatOtp(hari);isiFilterNegara();masukkanKartuBaru();terapkanFilter()}
+if(activeView==='home')updateBadgeNegara();
+document.getElementById('liveDot').style.background='var(--green)';
+}catch(e){document.getElementById('liveDot').style.background='var(--red)';console.error(e)}
+}
+
+function masukkanKartuBaru(){
+const grid=document.getElementById('otpGrid');
+const pertama=domOtpIds.size===0;
+const ph=grid.querySelector('.empty-state');
+const baru=allOtps.filter(o=>!domOtpIds.has(o.id));
+if(!baru.length)return;
+if(ph)ph.remove();
+const frag=document.createDocumentFragment();
+baru.forEach(o=>{domOtpIds.add(o.id);const el=document.createElement('div');el.innerHTML=buatKartuOtp(o,!pertama);frag.appendChild(el.firstElementChild)});
+grid.insertBefore(frag,grid.firstChild);
+const cards=grid.querySelectorAll('.otp-card');
+if(cards.length>100)Array.from(cards).slice(100).forEach(c=>{domOtpIds.delete(c.dataset.id);c.remove()});
+}
+
+function terapkanFilter(){
+filterNeg=document.getElementById('filterNegara').value;
+filterSearch=document.getElementById('otpSearch').value||'';
+const sq=filterSearch.toLowerCase();
+document.querySelectorAll('#otpGrid .otp-card').forEach(card=>{
+const o=allOtps.find(x=>x.id===card.dataset.id);
+if(!o){card.style.display='none';return}
+const negOk=filterNeg==='all'||o.country===filterNeg;
+const cariOk=!sq||(o.number||'').toLowerCase().includes(sq)||(o.sender||'').toLowerCase().includes(sq)||(o.message||'').toLowerCase().includes(sq)||(o.otp||'').includes(sq);
+card.style.display=(negOk&&cariOk)?'':'none';
+});
+}
+
+function buatKartuOtp(o,isNew=false){
+const esc=s=>(s||'').replace(/`/g,'\\`').replace(/\\/g,'\\\\').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const escA=s=>(s||'').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const blokOtp=o.otp?`<div class="otp-code-block" onclick="salinTeks('${escA(o.otp)}','Kode OTP')"><div class="otp-code-lbl">🔑 Kode OTP — Ketuk untuk Menyalin</div><div class="otp-code-val">${esc(o.otp)}</div></div>`:'';
+return`<div class="otp-card${isNew?' is-new':''}" data-id="${o.id}">
+<div class="otp-top">
+<div class="otp-left">
+<span class="otp-flag">${o.flag||'🌍'}</span>
+<span class="otp-country">${esc(o.country||'Tidak Diketahui')}</span>
+<span class="otp-sender">${esc(o.sender||'')}</span>
+</div>
+<span class="otp-time">${esc(o.time||'')}</span>
+</div>
+${blokOtp}
+<div class="otp-num-row"><span class="otp-num-lbl">📱 Nomor</span><span class="otp-num-val">${esc(o.masked_number||o.number||'—')}</span></div>
+<div class="otp-msg">${esc(o.message)}</div>
+<button class="otp-copy-btn" onclick="salinTeks(\`${esc(o.message)}\`,'Pesan')">📋 Salin Pesan Lengkap</button>
+</div>`;
+}
+
+function updateStatOtp(hari){
+document.getElementById('otpNegCount').textContent=new Set((hari||allOtps).map(o=>o.country)).size;
+}
+
+function isiFilterNegara(){
+const sel=document.getElementById('filterNegara');
+const cur=sel.value;
+const negs=[...new Set(allOtps.map(o=>o.country).filter(Boolean))].sort();
+sel.innerHTML='<option value="all">🌍 Semua Negara</option>'+negs.map(c=>{const fl=(allOtps.find(o=>o.country===c)||{}).flag||'🌍';return`<option value="${c}"${c===cur?' selected':''}>${fl} ${c}</option>`}).join('');
+}
+
+function updateBadgeNegara(){
+document.querySelectorAll('.country-card').forEach(card=>{
+const name=card.querySelector('.cc-name').textContent.trim().toLowerCase().split(' ')[0];
+const cnt=allOtps.filter(o=>o.country&&o.country.toLowerCase().includes(name)).length;
+const badge=card.querySelector('.cc-otp-badge');
+if(badge){if(cnt>0){badge.textContent=`🔑 ${cnt}`;badge.classList.add('visible')}else badge.classList.remove('visible')}
+});
+}
+
+function mulaiOtp(){hentikanOtp();otpTimer=setInterval(()=>{if(!document.hidden)ambilOtp()},OTP_IV)}
+function hentikanOtp(){if(otpTimer){clearInterval(otpTimer);otpTimer=null}}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)hentikanOtp();else if(activeView==='otps'){lastFetch=0;ambilOtp();mulaiOtp()}});
+
+async function refreshManual(){
+const btn=document.getElementById('refreshBtn');
+btn.classList.add('spinning');lastFetch=0;
+await ambilOtp();
+setTimeout(()=>btn.classList.remove('spinning'),700);
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+async function ambilOtpModal(){
+if(!modalNomor)return;
+try{
+const r=await fetch(API+'/api/otps?limit=500');
+const d=await r.json();
+if(!d.success)return;
+const matches=d.otps.filter(o=>o.number===modalNomor);
+masukkanKartuModal(matches);
+const ce=document.getElementById('modalJumlah');
+if(ce)ce.textContent=matches.length?`${matches.length} OTP diterima`:'';
+const dot=document.getElementById('modalLiveDot');
+if(dot)dot.style.background='var(--green)';
+}catch(e){const dot=document.getElementById('modalLiveDot');if(dot)dot.style.background='var(--red)'}
+}
+
+function masukkanKartuModal(matches){
+const grid=document.getElementById('modalOtpList');
+const pertama=domModalIds.size===0;
+const baru=matches.filter(o=>!domModalIds.has(o.id));
+if(!baru.length&&pertama){if(!grid.querySelector('.empty-state'))grid.innerHTML='<div class="empty-state"><div class="empty-icon">🔍</div><h3>Menunggu OTP pada nomor ini...</h3></div>';return}
+if(!baru.length)return;
+const ph=grid.querySelector('.empty-state');if(ph)ph.remove();
+const frag=document.createDocumentFragment();
+baru.forEach(o=>{domModalIds.add(o.id);const el=document.createElement('div');el.innerHTML=buatKartuOtp(o,!pertama);frag.appendChild(el.firstElementChild)});
+grid.insertBefore(frag,grid.firstChild);
+}
+
+async function refreshModal(){
+const btn=document.getElementById('modalRefreshBtn');
+if(btn)btn.classList.add('spinning');
+await ambilOtpModal();
+setTimeout(()=>{if(btn)btn.classList.remove('spinning')},700);
+}
+
+function lihatOtpNomor(nomor,negara,flag){
+modalNomor=nomor;
+document.getElementById('modalJudul').innerHTML=`${flag} ${negara}`;
+document.getElementById('modalNomor').textContent=nomor;
+document.getElementById('modalJumlah').textContent='';
+domModalIds.clear();
+document.getElementById('modalOtpList').innerHTML='';
+ambilOtpModal();
+document.getElementById('modalOtp').classList.add('open');
+document.body.style.overflow='hidden';
+if(modalTimer)clearInterval(modalTimer);
+modalTimer=setInterval(ambilOtpModal,4000);
+}
+
+function tutupModal(){
+document.getElementById('modalOtp').classList.remove('open');
+document.body.style.overflow='';
+modalNomor=null;domModalIds.clear();
+if(modalTimer){clearInterval(modalTimer);modalTimer=null}
+}
+document.getElementById('modalOtp').addEventListener('click',e=>{if(e.target===document.getElementById('modalOtp'))tutupModal()});
+document.addEventListener('keydown',e=>e.key==='Escape'&&tutupModal());
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+function onSearch(){
+const q=document.getElementById('mainSearch').value.trim();
+if(activeView==='country'){selectedCountry=null;document.getElementById('viewCountry').classList.remove('active');document.getElementById('viewHome').classList.add('active');activeView='home'}
+if(activeView==='home')renderNegara(q);
+}
+
+/* ============================================================
+   UTILS
+   ============================================================ */
+function salinTeks(text,label){
+navigator.clipboard.writeText(text).then(()=>tampilNotif(`✅ ${label} berhasil disalin!`)).catch(()=>{
+const el=document.createElement('textarea');el.value=text;el.style.cssText='position:fixed;opacity:0';
+document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
+tampilNotif(`✅ ${label} berhasil disalin!`);
+});
+}
+
+function tampilNotif(msg){
+const n=document.getElementById('notif');n.textContent=msg;n.classList.add('show');
+clearTimeout(n._t);n._t=setTimeout(()=>n.classList.remove('show'),2500);
+}
+
+function jadwalkanReset(){
+const now=new Date(),esok=new Date();
+esok.setHours(24,0,5,0);
+setTimeout(()=>{
+todayCount=0;todayDate=hariIni();
+localStorage.setItem('rc_today','0');localStorage.setItem('rc_date',hariIni());
+document.getElementById('statOtp').textContent='0';document.getElementById('otpCount').textContent='0';
+jadwalkanReset();
+},esok-now);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+async function init(){
+cekReset();
+terapkanBahasa();
+setLang(lang);
+jadwalkanReset();
+await muatNomor();
+await ambilOtp();
+}
+init();
+</script>
+</body>
+</html>
