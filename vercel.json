@@ -10,15 +10,21 @@
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate" }
       ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://Jeeyhosting.my.id" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
     }
   ],
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://weak-deloris-nothing672434-fe85179d.koyeb.app/:path*"
+      "destination": "https://weak-deloris-nothing672434-fe85179d.koyeb.app/api/:path*"
     }
   ]
 }
-
-
-
